@@ -1,0 +1,5 @@
+Flask
+langchain_huggingface
+requests
+pytest
+pytest-flask

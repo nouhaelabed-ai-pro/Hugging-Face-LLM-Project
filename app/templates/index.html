@@ -1,0 +1,36 @@
+{% extends "layout.html" %}
+
+{% block content %}
+<div class="p-4 border rounded shadow-sm bg-light">
+    <form id="llm-form" class="mb-4">
+        <div class="form-group">
+            <label for="prompt" class="font-weight-bold">Enter your prompt:</label>
+            <textarea id="prompt" name="prompt" class="form-control" rows="4" required></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary">Generate Response</button>
+    </form>
+    <div id="response" class="mt-4">
+        <h2>Response:</h2>
+        <p id="response-text" class="bg-light p-3 border rounded"></p>
+    </div>
+</div>
+
+<script>
+document.getElementById('llm-form').addEventListener('submit', async function(e) {
+    e.preventDefault();
+    const prompt = document.getElementById('prompt').value;
+    const responseDiv = document.getElementById('response-text');
+
+    const response = await fetch('/api/llm/generate', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({ prompt })
+    });
+
+    const data = await response.json();
+    responseDiv.innerText = data.response;
+});
+</script>
+{% endblock %}
