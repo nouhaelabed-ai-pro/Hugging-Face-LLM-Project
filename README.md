@@ -6,6 +6,7 @@ This project integrates Hugging Face language models with LangChain using a Flas
 ## Table of Contents
 
 - [Features](#features)
+- [Demo](#demo)
 - [Installation](#installation)
 - [Usage](#usage)
 - [Configuration](#configuration)
@@ -21,6 +22,16 @@ This project integrates Hugging Face language models with LangChain using a Flas
 - Real-time response generation for user prompts.
 - TDD approach with comprehensive testing.
 
+## Demo
+
+Here's a quick demo of the application in action:
+
+### Generate Response
+
+![Generate Response](assets/generate-response-demo.gif)
+
+> **Note**: The demo above shows how easy it is to interact with the language model through our web interface. Simply input your prompt and click "Generate Response" to see the output from the Hugging Face model.
+
 ## Installation
 
 ### Prerequisites
@@ -33,86 +44,67 @@ This project integrates Hugging Face language models with LangChain using a Flas
 1. **Clone the repository:**
 
    ```bash
-   git clone https://github.com/YOUR_USERNAME/YOUR_REPOSITORY.git
+   git clone https://github.com/nouhaelabed-ai-pro/LLM-Hugging-Face-Project.git
    cd YOUR_REPOSITORY
-   ```
+Create and activate a virtual environment:
 
-2. **Create and activate a virtual environment:**
+bash
+Copier le code
+python -m venv venv
+source venv/bin/activate  # On Windows, use `venv\Scripts\activate`
+Install the required packages:
 
-   ```bash
-   python -m venv venv
-   source venv/bin/activate  # On Windows, use `venv\Scripts\activate`
-   ```
+bash
+Copier le code
+pip install -r requirements.txt
+Usage
+Run the Flask application:
 
-3. **Install the required packages:**
+bash
+Copier le code
+python run.py
+Open your web browser and navigate to:
 
-   ```bash
-   pip install -r requirements.txt
-   ```
+arduino
+Copier le code
+http://127.0.0.1:5000/
+Enter your prompt in the text area and click "Generate Response" to see the model's output.
 
-## Usage
+Configuration
+Configure your Hugging Face API URL and API key in the config.py file:
 
-1. **Run the Flask application:**
-
-   ```bash
-   python run.py
-   ```
-
-2. **Open your web browser and navigate to:**
-
-   ```
-   http://127.0.0.1:5000/
-   ```
-
-3. **Enter your prompt in the text area and click "Generate Response" to see the model's output.**
-
-## Configuration
-
-Configure your Hugging Face API URL and API key in the `config.py` file:
-
-```python
+python
+Copier le code
 class Config:
     DEBUG = True
     HF_API_REPO = 'tiiuae/falcon-7b-instruct'
     HF_API_KEY = 'your-huggingface-api-key'
-```
+Replace 'your-model-name' and 'your-huggingface-api-key' with your actual Hugging Face model name and API key.
 
-Replace `'your-model-name'` and `'your-huggingface-api-key'` with your actual Hugging Face model name and API key.
+Running Tests
+This project uses pytest for testing. Ensure all dependencies are installed and run the tests:
 
-## Running Tests
-
-This project uses `pytest` for testing. Ensure all dependencies are installed and run the tests:
-
-```bash
+bash
+Copier le code
 pytest
-```
-
-### Test Structure
-
-- **Unit Tests:** Located in `tests/test_models.py` to test the model integration.
-- **Route Tests:** Located in `tests/test_routes.py` to test the Flask routes.
-
-## Technologies Used
-
-- Flask
-- LangChain
-- Hugging Face
-- PyTest
-- HTML/CSS for frontend
-
-## Contributing
-
+Test Structure
+Unit Tests: Located in tests/test_models.py to test the model integration.
+Route Tests: Located in tests/test_routes.py to test the Flask routes.
+Technologies Used
+Flask
+LangChain
+Hugging Face
+PyTest
+HTML/CSS for frontend
+Contributing
 Contributions are welcome! Please follow these steps:
 
-1. Fork the repository.
-2. Create a new branch (`git checkout -b feature/your-feature`).
-3. Commit your changes (`git commit -m 'Add some feature'`).
-4. Push to the branch (`git push origin feature/your-feature`).
-5. Create a new Pull Request.
+Fork the repository.
+Create a new branch (git checkout -b feature/your-feature).
+Commit your changes (git commit -m 'Add some feature').
+Push to the branch (git push origin feature/your-feature).
+Create a new Pull Request.
+License
+This project is proprietary software and is licensed under a custom license. See the LICENSE file for details.
 
-## License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-```
-
-Make sure to replace `YOUR_USERNAME` and `YOUR_REPOSITORY` with your actual GitHub username and repository name. Save this content in a file named `README.md` in the root of your project directory.
+For any questions regarding licensing, please contact nouhaelabed.pro@gmail.com                                                                                                                                                                                                                                                                .
