@@ -12,7 +12,6 @@ This project integrates Hugging Face language models with LangChain using a Flas
 - [Configuration](#configuration)
 - [Running Tests](#running-tests)
 - [Technologies Used](#technologies-used)
-- [Contributing](#contributing)
 - [License](#license)
 
 ## Features
@@ -46,65 +45,61 @@ Here's a quick demo of the application in action:
    ```bash
    git clone https://github.com/nouhaelabed-ai-pro/LLM-Hugging-Face-Project.git
    cd YOUR_REPOSITORY
-Create and activate a virtual environment:
+   
+2. **Create and activate a virtual environment:**
 
-bash
-Copier le code
-python -m venv venv
-source venv/bin/activate  # On Windows, use `venv\Scripts\activate`
-Install the required packages:
+   ```bash
+    python -m venv venv
+    source venv/bin/activate  # On Windows, use `venv\Scripts\activate`
+   
+3. **Install the required packages:**
 
-bash
-Copier le code
-pip install -r requirements.txt
-Usage
-Run the Flask application:
+    ```bash
+    pip install -r requirements.txt
+   
+## Usage
 
-bash
-Copier le code
-python run.py
-Open your web browser and navigate to:
+1. **Run the Flask application:**
 
-arduino
-Copier le code
-http://127.0.0.1:5000/
-Enter your prompt in the text area and click "Generate Response" to see the model's output.
+    ```bash
+    python run.py
 
-Configuration
-Configure your Hugging Face API URL and API key in the config.py file:
+2. **Open your web browser and navigate to:**
 
-python
-Copier le code
-class Config:
-    DEBUG = True
-    HF_API_REPO = 'tiiuae/falcon-7b-instruct'
-    HF_API_KEY = 'your-huggingface-api-key'
+    http://127.0.0.1:5000/
+
+3. Enter your prompt in the text area and click "Generate Response" to see the model's output.
+
+## Configuration
+
+**Configure your Hugging Face API URL and API key in the config.py file:**
+
+    class Config:
+        DEBUG = True
+        HF_API_REPO = 'your-model-name'
+        HF_API_KEY = 'your-huggingface-api-key'
+
 Replace 'your-model-name' and 'your-huggingface-api-key' with your actual Hugging Face model name and API key.
 
-Running Tests
+## Running Tests
 This project uses pytest for testing. Ensure all dependencies are installed and run the tests:
 
-bash
-Copier le code
-pytest
-Test Structure
-Unit Tests: Located in tests/test_models.py to test the model integration.
-Route Tests: Located in tests/test_routes.py to test the Flask routes.
-Technologies Used
-Flask
-LangChain
-Hugging Face
-PyTest
-HTML/CSS for frontend
-Contributing
-Contributions are welcome! Please follow these steps:
+    pytest
 
-Fork the repository.
-Create a new branch (git checkout -b feature/your-feature).
-Commit your changes (git commit -m 'Add some feature').
-Push to the branch (git push origin feature/your-feature).
-Create a new Pull Request.
-License
-This project is proprietary software and is licensed under a custom license. See the LICENSE file for details.
+### Test Structure
+1. **Unit Tests:** 
+    Located in tests/test_models.py to test the model integration. 
 
-For any questions regarding licensing, please contact nouhaelabed.pro@gmail.com                                                                                                                                                                                                                                                                .
+2. **Route Tests:**
+    Located in tests/test_routes.py to test the Flask routes.
+
+## Technologies Used
+### Flask
+### LangChain
+### Hugging Face
+### PyTest
+### HTML/CSS for frontend
+
+
+## License
+This project is proprietary software. See the LICENSE file for details.
