@@ -81,6 +81,7 @@ Here's a quick demo of the application in action:
 
 Replace 'your-model-name' and 'your-huggingface-api-key' with your actual Hugging Face model name and API key.
 
+
 ## Running Tests
 This project uses pytest for testing. Ensure all dependencies are installed and run the tests:
 
@@ -94,11 +95,12 @@ This project uses pytest for testing. Ensure all dependencies are installed and 
     Located in tests/test_routes.py to test the Flask routes.
 
 ## Technologies Used
-### Flask
-### LangChain
-### Hugging Face
-### PyTest
-### HTML/CSS for frontend
+
+- #### Flask
+- #### LangChain
+- #### Hugging Face
+- #### PyTest
+- #### HTML/CSS for frontend
 
 
 ## License
